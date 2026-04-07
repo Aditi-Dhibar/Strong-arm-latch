@@ -1,10 +1,12 @@
 # Strong-arm-latch
 Implement a strong arm latch in UMC 65nm technology
 
+---
+
 #  Design & Analysis of Strong Arm Latch
 
 ##  Overview
-This project focuses on the **design, simulation, and analysis of a Strong Arm Latch comparator** using the **UMC 65nm CMOS process**. The design includes an **SR latch at the output** to ensure output transitions occur every clock cycle.
+This project focuses on the **design, simulation, layout, and analysis of a Strong Arm Latch comparator** using the **UMC 65nm CMOS process**. The design includes an **SR latch at the output** to ensure output transitions occur every clock cycle.
 
 ---
 
@@ -69,6 +71,17 @@ The Strong Arm Latch is a **dynamic comparator** widely used in high-speed, low-
 
 ---
 
+##  Layout Design
+
+- Full custom **layout implementation** of the Strong Arm Latch in UMC 65nm  
+- Design considerations:
+  - Matching of differential pairs  
+  - Symmetric layout for reduced mismatch  
+  - Proper routing to minimize parasitics  
+- Performed **DRC (Design Rule Check)** and **LVS (Layout vs Schematic)** verification  
+
+---
+
 ##  Expected Outputs
 
 - Transient waveforms  
@@ -76,6 +89,7 @@ The Strong Arm Latch is a **dynamic comparator** widely used in high-speed, low-
 - Monte Carlo histogram  
 - 3σ offset voltage value  
 - Noise estimation results  
+- Verified layout (DRC & LVS clean)  
 
 ---
 
@@ -91,10 +105,10 @@ The Strong Arm Latch is a **dynamic comparator** widely used in high-speed, low-
 
 ```bash
 project/
-│── schematics/
+│── comparator_schematic_design/
+│── comparator_layout/
 │── simulations/
 │── results/
-│── plots/
 │── README.md
 ```
 
@@ -106,6 +120,7 @@ project/
 - Effects of mismatch and noise in analog circuits  
 - Metastability behavior in regenerative circuits  
 - Monte Carlo analysis for statistical variation  
+- Layout design and verification (DRC & LVS)  
 
 ---
 
